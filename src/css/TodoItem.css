@@ -1,0 +1,50 @@
+.content-list{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    margin: 15px 0px;
+    list-style: none;
+    align-items: center;
+    box-shadow: 0px 1px 20px -4px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 0px 1px 20px -4px rgba(0, 0, 0, 0.322);
+    -moz-box-shadow: 0px 1px 20px -4px rgba(0,0,0,0.76);
+}
+
+.content-list:hover{
+    background-color: rgb(243, 235, 235);
+}
+
+.check-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: rgb(136, 180, 216);
+    background-image: url("../assets/icon/check.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-text{
+    font-size: 14px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.status-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    right: 5px;
+    border-radius: 50%;
+    background-image: url("../assets/icon/bx-x.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}

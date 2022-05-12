@@ -1,0 +1,7 @@
+@import url('./general.css');
+
+.title{
+    font-size: var(--font-zise-primary);
+    margin: 15px 10px 25px 10px;
+    text-align: center;
+}
