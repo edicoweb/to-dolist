@@ -1,7 +1,14 @@
 @import url('./general.css');
 
-.title{
-    font-size: var(--font-zise-primary);
-    margin: 15px 10px 25px 10px;
+.section-title{
+    margin: 25px 20px 20px 20px;
     text-align: center;
+}
+.title{
+    font-size: var(--font-zise-title);
+    margin-bottom: 5px;
+}
+
+.counter-text{
+   font-size: var(--font-zise-primary); 
 }

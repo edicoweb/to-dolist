@@ -12,11 +12,20 @@
     -moz-box-shadow: 0px 1px 20px -4px rgba(0,0,0,0.76);
 }
 
-.content-list:hover{
-    background-color: rgb(243, 235, 235);
+.check-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: rgb(243, 98, 98);
+    background-image: url("../assets/icon/check.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.check-icon{
+.check-icon--active{
     position: absolute;
     width: 20px;
     height: 20px;
@@ -33,6 +42,10 @@
     font-size: 14px;
     margin-left: 40px;
     margin-right: 20px;
+}
+
+.content-text--complete{
+    text-decoration: line-through;
 }
 
 .status-icon{

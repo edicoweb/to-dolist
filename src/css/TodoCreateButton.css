@@ -1,6 +1,6 @@
 .create-button{
     display: flex;
-    position: absolute;
+    position: absolute; /*fixed*/
     width: 40px;
     height: 40px;
     right: 20px;
@@ -16,6 +16,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    transform: rotate(0);
+    transition:  .5s ease;
+}
+
+.create-button:hover{
+    transform: rotate(224deg);
 }
 
 .create-button:active{
