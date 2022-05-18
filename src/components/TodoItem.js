@@ -4,9 +4,9 @@ import '../css/TodoItem.css';
 function TodoItem(props){
 
     
-    const onComplete = () => {
-        alert(`Completaste ${props.text}`);
-    }
+    // const onComplete = () => {
+    //     alert(`Completaste ${props.text}`);
+    // }
     
     const onDelete = () =>{
         alert(`Borraste ${props.text}`);
@@ -18,7 +18,7 @@ function TodoItem(props){
 
             <span 
                 className={`check-icon ${props.completed && 'check-icon--active'}`}
-                onClick={()=>onComplete()}
+                onClick={props.onComplete}
             ></span>
 
             <p className={`content-text ${props.completed && 'content-text--complete'}`}>

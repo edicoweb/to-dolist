@@ -28,12 +28,25 @@ function App() {
     searchedTodos = todos;
   }
   else{
-    searchedTodos = todos.filter(todo => {
+    searchedTodos = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
     });
   }
+
+  //Complete Todos
+  const completeTodos = (text) =>{
+    const todoIndex = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = true;
+    // todos[todoIndex] = {
+    //   text: todos[todoIndex].text,
+    //   completed: true,
+    // };
+    setTodos(newTodos);
+  };
+
   return (
     <React.Fragment>
       <TodoCounter
@@ -52,6 +65,7 @@ function App() {
           key={todo.text} 
           text = {todo.text}
           completed = {todo.completed}
+          onComplete = {() => completeTodos(todo.text)}
         />
         ))}
       </TodoList>
