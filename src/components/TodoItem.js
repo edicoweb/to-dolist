@@ -2,17 +2,6 @@ import React from "react";
 import '../css/TodoItem.css';
 
 function TodoItem(props){
-
-    
-    // const onComplete = () => {
-    //     alert(`Completaste ${props.text}`);
-    // }
-    
-    const onDelete = () =>{
-        alert(`Borraste ${props.text}`);
-    }
-
-
     return(
         <li className="content-list">
 
@@ -27,7 +16,7 @@ function TodoItem(props){
 
             <span 
                 className="status-icon"
-                onClick={()=>onDelete()}
+                onClick={props.onDelete}
             ></span>
 
         </li>
