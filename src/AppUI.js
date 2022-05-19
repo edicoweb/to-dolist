@@ -8,41 +8,37 @@ import { TodoItem } from "./components/TodoItem";
 import { TodoCreateButton } from "./components/TodoCreateButton";
 
 function AppUI(){
-    return( 
+  return( 
     <React.Fragment>
-    <TodoCounter />
-
-    <TodoSearch />
-
-    <TodoContext.Consumer>
-      {({error, 
-      loading, 
-      searchedTodos, 
-      completeTodo, 
-      delteTodo})=>{
-        return(
-          <TodoList>
+      <TodoCounter />
+      <TodoSearch />
+      <TodoContext.Consumer>
+        {({error, 
+        loading, 
+        searchedTodos, 
+        completeTodo, 
+        deleteTodo,
+        })=>(    
+        <TodoList>
           {error && <p>errorrr!</p>}
           {loading && <p>Cargando</p>}
           {(!loading && !searchedTodos.length) && <p>Crear tu primer tarea</p>}
     
           {searchedTodos.map(todo => (
-            <TodoItem 
+          <TodoItem 
             key={todo.text} 
             text = {todo.text}
             completed = {todo.completed}
             onComplete = {() => {completeTodo(todo.text)}}
-            onDelete = {() => {delteTodo(todo.text)}}
+            onDelete = {() => {deleteTodo(todo.text)}}
           />
           ))}
-        </TodoList>
-        );
-      }}
-    </TodoContext.Consumer>
-
-    <TodoCreateButton />
-  </React.Fragment>
-    );
+        </TodoList>    
+        )}
+      </TodoContext.Consumer>
+      <TodoCreateButton />
+    </React.Fragment>
+  );
 }
 
 export { AppUI };

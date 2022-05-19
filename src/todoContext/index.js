@@ -3,65 +3,59 @@ import { useLocalStorage } from "./useLocalStorage";
 
 const TodoContext = React.createContext();
 
-function TodoProvider(props){ 
-    const {
-        item: todos,
-        setItem: saveTodos,
-        loading,
-        error,
-    } = useLocalStorage('TODOS_V1', []);
-    const [searchValue, setSearchValue] = React.useState('');
+function TodoProvider(props) {
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('TODOS_V1', []);
+  const [searchValue, setSearchValue] = React.useState('');
 
-    /*Todo counter */
-    const completedTodos = todos.filter(todo => !!todo.completed ).length;
-    const totalTodos = todos.length;
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
 
-    /* Todo Search */
-    let searchedTodos = [];
+  let searchedTodos = [];
 
-    if(!searchValue.length >= 1){
-        searchedTodos = todos;
-    }
-    else{
-        searchedTodos = todos.filter((todo) => {
-        const todoText = todo.text.toLowerCase();
-        const searchText = searchValue.toLowerCase();
-        return todoText.includes(searchText);
-        });
-    }
+  if(!searchValue.length >= 1) {
+    searchedTodos = todos;
+  }else {
+    searchedTodos = todos.filter(todo => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return todoText.includes(searchText);
+    });
+  }
 
-    //Complete Todos
-    const completeTodo = (text, completed) =>{
-        const todoIndex = todos.findIndex(todo => todo.text === text);
-        const newTodos = [...todos];
-        newTodos[todoIndex].completed = true;
-        saveTodos(newTodos);
-    };
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = true;
+    saveTodos(newTodos);
+  };
 
-    //Delete Todos
-    const delteTodo = (text) => {
-        const todoIndex = todos.findIndex(todo => todo.text === text);
-        const newTodos = [...todos];
-        newTodos.splice(todoIndex, 1);
-        saveTodos(newTodos);
-    }
-
-    return(
-        <TodoContext.Provider value={{
-            loading,
-            error,
-            totalTodos,
-            completedTodos,
-            searchValue,
-            setSearchValue,
-            searchedTodos,
-            completeTodo,
-            delteTodo,
-        }}>
-            {props.children}
-        </TodoContext.Provider>
-    );
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text === text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    saveTodos(newTodos);
+  };
+  
+  return (
+    <TodoContext.Provider value={{
+      loading,
+      error,
+      totalTodos,
+      completedTodos,
+      searchValue,
+      setSearchValue,
+      searchedTodos,
+      completeTodo,
+      deleteTodo,
+      }}>
+      {props.children}
+    </TodoContext.Provider>
+  );
 }
 
-
-export{ TodoContext, TodoProvider }
+export { TodoContext, TodoProvider };
