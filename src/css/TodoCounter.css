@@ -1,12 +1,14 @@
 @import url('./general.css');
 
 .section-title{
-    margin: 25px 20px 20px 20px;
+    margin: 15px 20px 20px 20px;
     text-align: center;
 }
 .title{
     font-size: var(--font-zise-title);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    color: rgb(64, 66, 66);
+    /* color: rgb(3, 188, 212); */
 }
 
 .counter-text{

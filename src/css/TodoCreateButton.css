@@ -7,7 +7,7 @@
     bottom: 20px;
     border-radius: 50%;
     border: none;
-    background: rgb(90, 245, 142);
+    background: rgb(55, 172, 94);
     box-shadow: 0px 1px 20px -4px rgba(0,0,0,0.76);
     -webkit-box-shadow: 0px 1px 20px -4px rgba(0, 0, 0, 0.329);
     -moz-box-shadow: 0px 1px 20px -4px rgba(0,0,0,0.76);
@@ -19,6 +19,8 @@
 
     transform: rotate(0);
     transition:  .5s ease;
+
+    z-index: 1;
 }
 
 .create-button:hover{
@@ -26,5 +28,5 @@
 }
 
 .create-button:active{
-    background: rgb(59, 233, 117);
+    background: rgb(29, 151, 70);
 }

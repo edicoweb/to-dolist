@@ -1,0 +1,71 @@
+@import url(../css/general.css);
+
+.modal-createForm{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    padding: 15px;
+    background: rgb(245, 238, 238);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.modal-labelForm{
+    color: black;
+    font-size: var(--font-zise-secondary);
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}
+
+.modal-form--textArea{
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+    color: rgb(119, 116, 116);
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 1px 20px -4px rgba(0, 0, 0, 0.308);
+    -webkit-box-shadow: 0px 1px 20px -4px rgba(0, 0, 0, 0.219);
+    -moz-box-shadow: 0px 1px 20px -4px rgba(0, 0, 0, 0.219);
+    outline: none;
+}
+
+.modal-form--textArea:focus{
+    border: none;
+    color: rgb(78, 74, 74);
+    background-color: rgb(255, 255, 255);
+}
+
+.modal-button--container{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+
+.button-modal{
+    width: 100px;
+    height: 35px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.button-cancel{
+    background-color: rgb(243, 77, 77);
+}
+
+.button-cancel:hover{
+    background-color: rgb(219, 36, 36);
+}
+
+.button-add{
+    background-color: rgb(55, 172, 94);
+}
+
+.button-add:hover{
+    background: rgb(29, 151, 70);
+}

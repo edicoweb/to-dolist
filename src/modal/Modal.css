@@ -1,0 +1,12 @@
+.modal-background{
+    background: rgba(88, 78, 78, 0.336);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
