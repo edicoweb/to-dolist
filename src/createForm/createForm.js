@@ -35,7 +35,7 @@ function CreateForm(){
             <div className="modal-button--container">
                 <button className="button-modal button-cancel" 
                     type="button" 
-                    onClick={onCancel} 
+                    onClick={onCancel}  
                 >Cancelar</button>
 
                 <button className="button-modal button-add"
