@@ -1,4 +1,4 @@
-<img src="https://github.com/edicoweb/to-dolist/public/note-app.png" alt="note-app">
+<img src="https://github.com/edicoweb/to-dolist/blob/main/public/note-app.png" alt="note-app">
 
 **Note-App** [Clic Aquí](https://edicoweb.github.io/to-dolist/)
 
