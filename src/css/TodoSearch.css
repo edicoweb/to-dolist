@@ -23,3 +23,11 @@
     color: rgb(119, 116, 116);
     background-color: rgb(255, 255, 255);
 }
+
+@media (max-width: 900px){
+    .search-section{
+        position: fixed;
+        z-index: 1;
+        top: 90px;
+    }
+}

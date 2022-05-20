@@ -14,3 +14,23 @@
 .counter-text{
    font-size: var(--font-zise-primary); 
 }
+
+@media (max-width: 900px){
+    .section-title{
+        position: fixed;
+        z-index: 1;
+        background: rgb(245, 238, 238);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .title{
+        margin-top: 15px;
+    }
+
+    .counter-text{
+        margin-bottom: 100px;
+    }
+}

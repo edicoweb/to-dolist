@@ -30,3 +30,9 @@
 .create-button:active{
     background: rgb(29, 151, 70);
 }
+
+@media (max-width: 900px){
+    .create-button{
+        position: fixed;
+    }
+}

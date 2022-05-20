@@ -30,7 +30,7 @@ function CreateForm(){
             <textarea className="modal-form--textArea" 
                 value={newTodosValue}
                 onChange={onChange}
-                placeholder="Tarea"
+                placeholder="Ingrese Nueva Tarea"
             />
             <div className="modal-button--container">
                 <button className="button-modal button-cancel" 
